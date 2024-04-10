@@ -1,5 +1,5 @@
 (library
- (inline_tests)
  (name a6)
  (preprocess
-  (pps ppx_inline_test)))
+  (pps bisect_ppx))
+ (modules rbset))

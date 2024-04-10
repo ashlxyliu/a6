@@ -2,6 +2,7 @@
 
 type color = Red | Black
 type 'a rb_tree = Leaf | Node of color * 'a rb_tree * 'a * 'a rb_tree
+type 'a t = 'a rb_tree
 
 (* Empty set represented by a leaf *)
 let empty = Leaf
@@ -22,7 +23,7 @@ let balance = function
   | Black, a, x, Node (Red, Node (Red, b, y, c), z, d)
   | Black, a, x, Node (Red, b, y, Node (Red, c, z, d)) ->
       Node (Red, Node (Black, a, x, b), y, Node (Black, c, z, d))
-  | t -> Node t
+  | color, a, x, b -> Node (color, a, x, b)
 
 (* Insertion using Okasaki's algorithm *)
 let rec insert x = function
