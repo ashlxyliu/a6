@@ -15,6 +15,6 @@ val mem : 'a -> 'a t -> bool
     Returns true if [x] is a member of [s], otherwise false. *)
 
 val insert : 'a -> 'a t -> 'a t
-(** [insert x s] inserts an element into the set.
+(** [insert x s] inserts an element into the set using Okasaki's algorithm.
     Returns a new set with [x] added. If [x] was already a member of [s], 
     returns [s] unchanged. *)

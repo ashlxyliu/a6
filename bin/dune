@@ -1,4 +1,6 @@
 (executable
  (public_name a6)
  (name main)
- (libraries a6))
+ (libraries a6 unix)
+ (instrumentation
+  (backend bisect_ppx)))
