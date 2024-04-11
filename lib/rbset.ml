@@ -27,7 +27,19 @@ let rec insert x = function
       else if x > y then balance (color, a, y, insert x b)
       else s
 
+let rec insert x = function
+  | Leaf -> Node (Red, Leaf, x, Leaf) (* Inserting into an empty tree *)
+  | Node (color, a, y, b) as s ->
+      if x < y then balance (color, insert x a, y, b)
+      else if x > y then balance (color, a, y, insert x b)
+      else s
+
 let insert x s =
-  match insert x s with
-  | Node (_, a, y, b) -> Node (Black, a, y, b)
-  | Leaf -> failwith "insert: Invariant violation"
+  match insert x s with Node (_, a, y, b) -> Node (Black, a, y, b)
+(* Ensure the root is always black *)
+(* Removed the 'Leaf -> failwith "Invariant violation"' case *)
+
+(* let insert x s =
+   match insert x s with
+   | Node (_, a, y, b) -> Node (Black, a, y, b)
+   | Leaf -> failwith "insert: Invariant violation" *)
