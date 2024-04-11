@@ -32,19 +32,6 @@ let generate_n_values min_n max_n step =
   in
   aux min_n []
 
-(* Main function to run the measurements and output CSV *)
-(* let () =
-   let min_n = 1000 in
-   let max_n = 1000000 in
-   let step = 10 in
-   let n_values = generate_n_values min_n max_n step in
-   Printf.printf "N,Time\n";
-   List.iter
-     (fun n ->
-       let median_time = measure_insertion n in
-       Printf.printf "%d,%g\n" n median_time)
-     n_values *)
-
 let () =
   let min_n = 1000 in
   (* Adjust based on your system's performance *)
