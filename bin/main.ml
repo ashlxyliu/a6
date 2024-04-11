@@ -33,14 +33,28 @@ let generate_n_values min_n max_n step =
   aux min_n []
 
 (* Main function to run the measurements and output CSV *)
+(* let () =
+   let min_n = 1000 in
+   let max_n = 1000000 in
+   let step = 10 in
+   let n_values = generate_n_values min_n max_n step in
+   Printf.printf "N,Time\n";
+   List.iter
+     (fun n ->
+       let median_time = measure_insertion n in
+       Printf.printf "%d,%g\n" n median_time)
+     n_values *)
+
 let () =
   let min_n = 1000 in
+  (* Adjust based on your system's performance *)
   let max_n = 1000000 in
   let step = 10 in
   let n_values = generate_n_values min_n max_n step in
-  Printf.printf "N,Time\n";
+  Printf.printf "N,Time,N log N\n";
   List.iter
     (fun n ->
       let median_time = measure_insertion n in
-      Printf.printf "%d,%g\n" n median_time)
+      let n_log_n = float_of_int n *. log (float_of_int n) in
+      Printf.printf "%d,%g,%g\n" n median_time n_log_n)
     n_values
