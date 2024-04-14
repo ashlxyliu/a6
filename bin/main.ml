@@ -1,3 +1,5 @@
+(** @author Ashley Liu awl77 *)
+
 open Unix
 open A6.Rbset
 
@@ -7,6 +9,7 @@ let time f x =
   let stop = gettimeofday () in
   stop -. start
 
+(** Function to insert n distinct elements into a set *)
 let insert_n_elements n =
   let rec insert_aux set current_element =
     if current_element < n then
@@ -15,11 +18,13 @@ let insert_n_elements n =
   in
   insert_aux empty 0
 
+(** Return the median time *)
 let measure_insertion n =
   let times = Array.init 10 (fun _ -> time insert_n_elements n) in
   Array.sort compare times;
   times.(Array.length times / 2)
 
+(** Generating a range of n values for testing *)
 let generate_n_values min_n max_n step =
   let rec aux current acc =
     if current > max_n then List.rev acc
@@ -27,10 +32,11 @@ let generate_n_values min_n max_n step =
   in
   aux min_n []
 
+(** Main function to run the measurements and output CSV *)
 let () =
   let output_filename =
     if Array.length Sys.argv > 1 then Sys.argv.(1)
-    else "performance_data.csv" (* Default filename if none specified *)
+    else "data.csv" (** Default filename if none specified *)
   in
   let min_n = 1000 in
   let max_n = 1000000 in
