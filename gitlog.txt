@@ -1,0 +1,114 @@
+commit 5a5a99a9600906101d50591eb2b92b44ae4d3d49
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Sun Apr 14 11:38:32 2024 -0400
+
+    Implement command-line argument handling for performance script
+
+    - Add functionality to main.ml to accept an output filename
+    - Update documentation for command-line usage
+    - Add specifications
+
+commit 54fb5d512f050da103fac053825d00921de7f3eb
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Sun Apr 14 11:32:43 2024 -0400
+
+    Implement final performance data collection for large N
+
+    - Adjust main.ml to handle larger datasets
+    - Optimize insert function 
+
+commit 79e7db0be562c086cbd3361bf02aacbeedca9ab8
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Sun Apr 14 10:55:47 2024 -0400
+
+    Implement performance measurement output to CSV
+
+    - Extend main.ml to output measured data to data.csv
+    - Validate CSV output with small test dataset
+
+commit 773a5b5e3891bf015366aae49e853e8da7e9ba04
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Sat Apr 13 21:01:03 2024 -0400
+
+    Implement iterative testing for performance metrics
+
+    - Refine main.ml to loop through a range of N values
+    - Ensure accuracy of timing measurements
+
+commit ad0bdb40cda0a0649f6cda4797458436411e4761
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Sat Apr 13 20:45:59 2024 -0400
+
+    Implement data collection for regression analysis
+
+    - Collect time data 
+    - Test and confirm consistency of data collection
+
+commit c74a6af168ab2d01438fab168e17fed4f8f38af9
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Thu Apr 11 17:07:06 2024 -0400
+
+    Implement enhancements to the red-black tree balance function
+
+    - Refactor balance logic for edge cases
+    - Benchmark and test balance improvements
+
+commit 7c3785ae02ad3afc9dd9e081f8460aaf595b8999
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Thu Apr 11 16:42:15 2024 -0400
+
+    Implement red-black tree insertion improvements
+
+    - Optimize insert function for better performance
+
+commit 207ec5697ccf1dcc25f5b77294ee54bb030b1991
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Thu Apr 11 16:30:22 2024 -0400
+
+    Implement red-black tree set operations
+
+    - Add essential set operations such as empty, mem, and insert
+    - Add specifications
+
+commit 7417249287581f8c42a08cbe4bd092868b0d360a
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Thu Apr 11 11:44:16 2024 -0400
+
+    Implement comprehensive test cases for red-black tree
+
+    - Expand unit testing to cover complex tree configurations
+    - Introduce randomized data testing for insertions
+
+commit 234bbec27d0b6a200c982144fb6a1621c6a238ab
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Wed Apr 10 17:45:35 2024 -0400
+
+    Implement unit testing for set operations
+
+    - Design and develop OUnit tests for mem and insert
+    - Validate functionality with edge cases
+    - Add specifications
+
+commit 8256862ad579c5b01839950bf7f3832ff9b4e15f
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Wed Apr 10 17:14:04 2024 -0400
+
+    Implement test suite automation with Bisect
+
+    - Integrate Bisect to track code coverage
+    - Enable Bisect instrumentation
+
+commit dffa6408fac81ab4e6a8dd75fec0914a199de2a9
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Wed Apr 10 10:59:06 2024 -0400
+
+    Implement red-black tree abstract type
+
+    - Define the abstract type for set in rbset.mli
+    - Ensure encapsulation of tree's representation
+
+commit 574d690bfae2fd476e09f0811a19dbf8f688a756
+Author: Ashley Liu <awl77@cornell.edu>
+Date:   Wed Apr 10 10:51:14 2024 -0400
+
+    Initial commit
